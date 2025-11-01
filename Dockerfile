@@ -6,6 +6,7 @@ RUN python3 -m pip install --upgrade pip setuptools wheel
 RUN python3 -m pip install -r /tmp/requirements.txt
 
 WORKDIR /src
-COPY . /src
+COPY src/ /src/
 
-CMD ["python3", "-m", "src.main"]
+# Run the actor
+CMD ["python3", "main.py"]
